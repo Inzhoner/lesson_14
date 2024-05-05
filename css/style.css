@@ -75,24 +75,54 @@ a:hover {
 
 .checkout-info__box {
 }
+
 .box-info {
     display: flex;
+    margin-bottom: 20px;
 }
+
 .box-info__customer {
 }
 .customer-field {
+    display: flex;
+    flex-direction: column;
 }
 .customer-field__item {
 }
 .customer-field__item--surname {
 }
-.customer-field__input {
+
+.customer-field__input,
+.contact-field__input {
+    line-height: 1.87;
+    height: 50px;
+    padding-inline: 20px;
 }
+
 .customer-field__item--name {
 }
 .customer-field__item--father-name {
 }
-.box-info__contact-fielf {
+.box-info__contact {
 }
-.box-info__different-recipient {
+.contact-field {
+    display: flex;
+    flex-direction: column;
+}
+.contact-field__item {
+}
+.contact-field__item--phone {
+}
+
+.contact-field__item--email {
+}
+
+.box-recipient {
+    line-height: 1.87;
+    height: 30px;
+    padding-inline: 20px;
+}
+
+.box-recipient__input {
+    margin-right: 10px;
 }
