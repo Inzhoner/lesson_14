@@ -87,7 +87,9 @@ a:hover {
     display: flex;
     flex-direction: column;
 }
-.customer-field__item {
+.customer-field__item,
+.contact-field__item {
+    min-width: 285px;
 }
 .customer-field__item--surname {
 }
