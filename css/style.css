@@ -15,9 +15,9 @@ body {
     margin-inline: auto;
 }
 
-a:hover {
+/* a:hover {
     color: #ffbc57;
-}
+} */
 
 .btn {
     background-color: #ffbc57;
@@ -28,8 +28,13 @@ a:hover {
     border-radius: 8px;
 }
 
-/*+ Order */
-.order__title {
+/*// Order */
+.order__wrapper {
+    display: flex;
+    gap: 30px;
+}
+
+.order__main-title {
     color: #2b2929;
     font-size: 40px;
     font-weight: 600;
@@ -37,23 +42,31 @@ a:hover {
     margin-bottom: 40px;
 }
 
+/* // Checkout Info */
 .order__content {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    gap: 30px;
 }
 .order__checkout {
     width: 100%;
     max-width: 740px;
     padding: 30px;
 }
+
 .order__items {
     width: 100%;
     max-width: 520px;
-    background-color: yellowgreen;
+    background-color: #371c17;
 }
 
-.checkout-info__title {
+.order__checkout {
+    border-radius: 8px;
+    background: #fff;
+    border-bottom: #f8f8f8 solid 5px;
+}
+
+.checkout-subtitle {
     color: #2b2929;
     font-size: 26px;
     font-weight: 600;
@@ -64,67 +77,204 @@ a:hover {
     margin-bottom: 30px;
 }
 
-.checkout-info__title::before {
+.checkout-subtitle--info::before {
     content: '';
     width: 60px;
     height: 60px;
-    background-image: url(../img/icon-info.svg);
+    background-image: url(../img/info/icon-info.svg);
     background-position: center;
     background-repeat: no-repeat;
 }
 
-.checkout-info__box {
-}
-
-.box-info {
+.checkout-info__body {
     display: flex;
+    justify-content: space-between;
+    gap: 30px;
     margin-bottom: 20px;
 }
-
-.box-info__customer {
-}
-.customer-field {
+.checkout-info__column {
     display: flex;
     flex-direction: column;
+    row-gap: 20px;
 }
-.customer-field__item,
-.contact-field__item {
-    min-width: 285px;
+.checkout-info__item {
+    border-radius: 8px;
+    border: 1px solid #d1d5d5;
+    background: #fff;
 }
-.customer-field__item--surname {
-}
-
-.customer-field__input,
-.contact-field__input {
-    line-height: 1.87;
+.checkout-info__input {
+    width: 325px;
     height: 50px;
     padding-inline: 20px;
 }
 
-.customer-field__item--name {
+.checkout-info__input::placeholder {
+    line-height: 1.87;
 }
-.customer-field__item--father-name {
+
+.checkbox-info__label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    line-height: 1.87;
+    cursor: pointer;
 }
-.box-info__contact {
+
+.checkbox-info__label::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    border: 1px solid #d1d5d5;
 }
-.contact-field {
+
+.checkbox-info__input:checked + .checkbox-info__label::before {
+    background-image: url(../img/checkbox-info__checked.svg);
+    background-color: #ffbc57;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* // Checkout delivery */
+.checkout-subtitle--delivery::before {
+    content: '';
+    width: 60px;
+    height: 60px;
+    background-image: url(../img/delivery/icon-delivery.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.checkout-delivery__body {
     display: flex;
     flex-direction: column;
-}
-.contact-field__item {
-}
-.contact-field__item--phone {
+    row-gap: 30px;
 }
 
-.contact-field__item--email {
+/* // Delivery-option */
+.delivery-option__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
 }
 
-.box-recipient {
+.delivery-option__item {
+    flex: 0 0 210px;
+}
+
+.choose__input,
+.checkbox-info__input {
+    appearance: none; /* Видаляє стандартне відображення елементів */
+    opacity: 0; /* Робить елементи невидимими */
+    pointer-events: none; /* Вимикає взаємодію з елементами */
+}
+
+.choose__label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    border: 3px solid #f8f8f8;
+    background: #fff;
+    padding: 20px 10px;
+}
+
+.choose__label:hover {
+    border-color: #ffbc57;
+    background: #f8f8f8;
+}
+
+.choose__label::before {
+    content: '';
+    width: 40px;
+    height: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 10px;
+}
+
+/*! check-circle */
+.choose__input:checked + .choose__label::before {
+    background-image: url(../img/delivery/check-circle.svg);
+}
+
+/*/ pickup icon */
+.choose__label--pickup::before {
+    background-image: url(../img/delivery/pickup.svg);
+}
+
+/*/ nova-poshta icon */
+.choose__label--nova-poshta::before {
+    background-image: url(../img/delivery/nova-poshta.svg);
+}
+
+/*/ courier icon */
+.choose__label--courier::before {
+    background-image: url(../img/delivery/courier.svg);
+}
+
+.choose__title {
+    color: #2b2929;
     line-height: 1.87;
-    height: 30px;
-    padding-inline: 20px;
 }
 
-.box-recipient__input {
-    margin-right: 10px;
+.choose__price {
+    color: #b1b1b1;
+    font-size: 15px;
+    line-height: 1.46;
+}
+
+/* // Delivery description */
+.checkout-delivery__description {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    border-radius: 8px;
+    background: #f8f8f8;
+    padding: 20px 20px;
+}
+
+.description-box__wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 89px;
+    transition: all 0.2s;
+}
+
+.description-box__time {
+    color: #2b2929;
+    line-height: 1.87;
+    margin-bottom: 5px;
+}
+.description-box__address {
+    color: #2b2929;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.description-box__link {
+    display: flex;
+    gap: 10px;
+    border-radius: 8px;
+    background: #ffbc57;
+    color: #fff;
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.26;
+    padding: 13px 20px;
+}
+
+.description-box__link::before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    background: url(../img/delivery/map.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.description-box__map-btn:hover {
+    transform: scale(1.05);
 }

@@ -5,88 +5,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Оформлення замовлення</title>
+    <title>Урок 15</title>
 </head>
 
 <body>
     <div class="order">
         <div class="order__container">
-            <h1 class="order__title">Оформлення замовлення</h1>
-            <div class="order__content">
-                <!--! Start -->
-                <div class="order__checkout checkout-info">
-                    <div class="checkout-info__customer">
-                        <h2 class="checkout-info__title">Інформація про покупця</h2>
-                        <div class="checkout-info__box box-info">
-                            <div class="box-info__customer customer-field">
-                                <div class="customer-field__item customer-field__item--surname">
-                                    <input class="customer-field__input" id="surname" type="text" placeholder="Прізвище">
+            <h1 class="order__main-title">Оформлення замовлення</h1>
+            <div class="order__wrapper">
+                <!--// Order content -->
+                <div class="order__content">
+                    <!--// Checkout Info -->
+                    <div class="order__checkout checkout-info">
+                        <div class="checkout-info__customer">
+                            <h2 class="checkout-subtitle checkout-subtitle--info">Інформація про покупця</h2>
+                            <div class="checkout-info__body">
+                                <div class="checkout-info__column">
+                                    <div class="checkout-info__item">
+                                        <input class="checkout-info__input" id="surname" type="text" placeholder="Прізвище">
+                                    </div>
+                                    <div class="checkout-info__item">
+                                        <input class="checkout-info__input" id="name" type="text" placeholder="Ім’я">
+                                    </div>
+                                    <div class="checkout-info__item">
+                                        <input class="checkout-info__input" id="father" type="text" placeholder="По батькові">
+                                    </div>
                                 </div>
-                                <div class="customer-field__item customer-field__item--name">
-                                    <input class="customer-field__input" id="name" type="text" placeholder="Ім’я">
-                                </div>
-                                <div class="customer-field__item customer-field__item--father-name">
-                                    <input class="customer-field__input" id="father" type="text" placeholder="По батькові">
+                                <div class="checkout-info__column">
+                                    <div class="checkout-info__item">
+                                        <input class="checkout-info__input" id="phone" type="tel" placeholder="Контактний телефон">
+                                    </div>
+                                    <div class="checkout-info__item">
+                                        <input class="checkout-info__input" id="email" type="email" placeholder="E-mail">
+                                    </div>
                                 </div>
                             </div>
-                            <div class="box-info__contact contact-field">
-                                <div class="contact-field__item contact-field__item--phone">
-                                    <input class="contact-field__input" id="phone" type="tel" placeholder="Контактний телефон">
-                                </div>
-                                <div class="contact-field__item contact-field__item--email">
-                                    <input class="contact-field__input" id="email" type="email" placeholder="E-mail">
-                                </div>
-                            </div>                            
+                            <div class="checkout-info__checkbox checkbox-info">
+                                <label class="checkbox-info__label">
+                                    <input class="checkbox-info__input" type="checkbox" name="recipient" id="recipient">
+                                    Отримуватиме замовлення інша людина
+                                </label>
+                            </div>
                         </div>
-                        <div class="checkout-info__box box-recipient">
-                            <label>
-                                <input class="box-recipient__input" type="checkbox" name="recipient" id="recipient">
-                                Отримуватиме замовлення інша людина
-                            </label>
+                    </div>
+                    <!--// Checkout delivery -->
+                    <div class="order__checkout checkout-delivery">
+                        <div class="checkout-delivery__customer">
+                            <h2 class="checkout-subtitle checkout-subtitle--delivery">Вибір способу оплати</h2>
+                            <div class="checkout-delivery__body delivery-option">
+                                <!--// Delivery-option -->
+                                <ul class="delivery-option__list">
+                                    <li class="delivery-option__item choose">
+                                        <input class="choose__input" id="pickup" type="radio" name="delivery" va lue="pickup">
+                                        <label class="choose__label choose__label--pickup" for="pickup">
+                                            <span class="choose__title">Самовивіз із магазину</span>
+                                            <span class="choose__price">Бесплатно</span>
+                                        </label>
+                                    </li>
+                                    <li class="delivery-option__item choose">
+                                        <input class="choose__input" id="nova-poshta" type="radio" name="delivery" value="nova-poshta">
+                                        <label class="choose__label choose__label--nova-poshta" for="nova-poshta">
+                                            <span class="choose__title">Доставка Нова Пошта</span>
+                                            <span class="choose__price">≈ від 500 грн</span>
+                                        </label>
+                                    </li>
+                                    <li class="delivery-option__item choose">
+                                        <input class="choose__input" id="courier" type="radio" name="delivery" value="courier">
+                                        <label class="choose__label choose__label--courier" for="courier">
+                                            <span class="choose__title">Доставка кур'єром</span>
+                                            <span class="choose__price">≈ від 200 грн</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                                <!--// Delivery description -->
+                                <div class="checkout-delivery__description description-box">
+                                    <img class="description-box__icon" src="img/delivery/location.svg" alt="location icon">
+                                    <div class="description-box__wrapper">
+                                        <div class="description-box__text">
+                                            <p class="description-box__time">Графік роботи: щодня з 9:00 до 18:00</p>
+                                            <p class="description-box__address">м. Київ, пров. Ізяславський 52, пов. 2</p>
+                                        </div>
+                                        <button class="description-box__map-btn">
+                                            <a class="description-box__link" href="#!">На мапі</a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <!--! Don`t use -->
-                <div class="order__items"></div>
+                <div class="order__items" style="display: none;"></div>
             </div>
         </div>
     </div>
 </body>
 
 </html>
-
-<!-- <div class="order__checkout checkout-info">
-    <div class="checkout-info__customer">
-      <h2 class="checkout-info__title">Інформація про покупця</h2>
-      <div class="checkout-info__body">
-  
-        <div class="checkout-info__column">
-          <div class="checkout-info__item">
-            <input class="checkout-info__input" id="surname" type="text" placeholder="Прізвище">
-          </div>
-          <div class="checkout-info__item">
-            <input class="checkout-info__input" id="name" type="text" placeholder="Ім’я">
-          </div>
-          <div class="checkout-info__item">
-            <input class="checkout-info__input" id="father" type="text" placeholder="По батькові">
-          </div>
-        </div>
-  
-        <div class="checkout-info__column">
-          <div class="checkout-info__item">
-            <input class="checkout-info__input" id="phone" type="tel" placeholder="Контактний телефон">
-          </div>
-          <div class="checkout-info__item">
-            <input class="checkout-info__input" id="email" type="email" placeholder="E-mail">
-          </div>
-        </div>
-  
-      </div>
-      <div class="checkout-info__checkbox checkbox-info">
-        <label class="checkbox-info__label">
-          <input class="checkbox-info__input" type="checkbox" name="recipient" id="recipient">
-          Отримуватиме замовлення інша людина
-        </label>
-      </div>
-    </div>
-  </div> -->
