@@ -22,7 +22,7 @@
                             <div class="checkout-info__body">
                                 <div class="checkout-info__column">
                                     <div class="checkout-info__item">
-                                        <input class="checkout-info__input" id="surname" type="text" placeholder="Прізвище">
+                                        <input class="checkout-info__input" id="surname" type="text" placeholder="Прізвище" checked>
                                     </div>
                                     <div class="checkout-info__item">
                                         <input class="checkout-info__input" id="name" type="text" placeholder="Ім’я">
@@ -41,22 +41,22 @@
                                 </div>
                             </div>
                             <div class="checkout-info__checkbox checkbox-info">
-                                <label class="checkbox-info__label">
-                                    <input class="checkbox-info__input" type="checkbox" name="recipient" id="recipient">
-                                    Отримуватиме замовлення інша людина
-                                </label>
+                                <input class="checkbox-info__input" id="recipient" type="checkbox" name="recipient">
+                                <label class="checkbox-info__label" for="recipient">Отримуватиме замовлення інша людина</label>
                             </div>
                         </div>
                     </div>
                     <!--// Checkout delivery -->
                     <div class="order__checkout checkout-delivery">
                         <div class="checkout-delivery__customer">
-                            <h2 class="checkout-subtitle checkout-subtitle--delivery">Вибір способу оплати</h2>
+                            <h2 class="checkout-subtitle checkout-subtitle--delivery">
+                                Вибір способу оплати
+                            </h2>
                             <div class="checkout-delivery__body delivery-option">
                                 <!--// Delivery-option -->
                                 <ul class="delivery-option__list">
                                     <li class="delivery-option__item choose">
-                                        <input class="choose__input" id="pickup" type="radio" name="delivery" va lue="pickup">
+                                        <input class="choose__input" id="pickup" type="radio" name="delivery" value="pickup" checked>
                                         <label class="choose__label choose__label--pickup" for="pickup">
                                             <span class="choose__title">Самовивіз із магазину</span>
                                             <span class="choose__price">Бесплатно</span>
@@ -93,6 +93,75 @@
                             </div>
                         </div>
                     </div>
+                    <!--// Checkout payment  -->
+                    <div class="order__checkout checkout-payment">
+                        <div class="checkout-payment__customer">
+                            <h2 class="checkout-subtitle checkout-subtitle--payment">
+                                Вибір способу оплати
+                            </h2>
+                            <ul class="checkout-payment__list">
+                                <!--/ Cash item -->
+                                <li class="checkout-payment__item cash-item">
+                                    <input class="checkout-payment__input" id="cash" type="radio" name="payment-method" value="cash">
+                                    <label class="checkout-payment__label" for="cash">
+                                        <span class="checkout-payment__title">
+                                            Готівкою при отриманні (Післяоплата)
+                                        </span>
+                                    </label>
+                                </li>
+                                <!--/ Card item -->
+                                <li class="checkout-payment__item card-item">
+                                    <input class="checkout-payment__input" id="card" type="radio" name="payment-method" value="card" checked>
+                                    <label class="checkout-payment__label" for="card">
+                                        <span class="checkout-payment__title">
+                                            Оплата карткою на сайті
+                                        </span>
+                                        <img class="checkout-payment__img-master-card" src="img/payment/master-card-logo.svg" alt="icon master card">
+                                        <img class="checkout-payment__img-visa-card" src="img/payment/visa-card-logo.svg" alt="icon visa card">
+                                    </label>
+                                </li>
+                                <!--/ Privat item -->
+                                <li class="checkout-payment__item privat-pay-item">
+                                    <input class="checkout-payment__input" id="privat-pay" type="radio" name="payment-method" value="privat-pay">
+                                    <label class="checkout-payment__label" for="privat-pay">
+                                        <span class="checkout-payment__title">
+                                            Privat Pay
+                                        </span>
+                                        <img class="checkout-payment__img-master-card" src="img/payment/privat-pay-logo.svg" alt="icon privat pay">
+                                    </label>
+                                </li>
+                                <!--/ Credit item  -->
+                                <li class="checkout-payment__item credit-item">
+                                    <input class="checkout-payment__input" id="credit" type="radio" name="payment-method" value="credit">
+                                    <label class="checkout-payment__label" for="credit">
+                                        <span class="checkout-payment__title">
+                                            Кредит від Krovato
+                                        </span>
+                                    </label>
+                                </li>
+                                <!--/ Privat parts item -->
+                                <li class="checkout-payment__item privat-parts-item">
+                                    <input class="checkout-payment__input" id="privat-parts" type="radio" name="payment-method" value="privat-parts">
+                                    <label class="checkout-payment__label" for="privat-parts">
+                                        <span class="checkout-payment__title">
+                                            Оплата частинами ПриватБанк
+                                        </span>
+                                        <img class="checkout-payment__img-master-card" src="img/payment/privaty-credit-logo.svg" alt="icon privat credit pay">
+                                    </label>
+                                </li>
+                                <!--/ Mono parts item -->
+                                <li class="checkout-payment__item monobank-parts-item">
+                                    <input class="checkout-payment__input" id="monobank-parts" type="radio" name="payment-method" value="monobank-parts">
+                                    <label class="checkout-payment__label" for="monobank-parts">
+                                        <span class="checkout-payment__title">
+                                            Оплата частинами МоноБанк
+                                        </span>
+                                        <img class="checkout-payment__img-master-card" src="img/payment/mono-bank-logo.svg" alt="icon privat credit pay">
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
                 <!--! Don`t use -->
                 <div class="order__items" style="display: none;"></div>
@@ -102,3 +171,34 @@
 </body>
 
 </html>
+
+<!-- <form action="/submit-payment" method="post">
+    <fieldset>
+      <legend>Вибір способу оплати</legend>
+      <label>
+        <input type="radio" name="payment-method" value="cash">
+        Готівкою при отриманні (Післяплата)
+      </label>
+      <label>
+        <input type="radio" name="payment-method" value="card-on-site">
+        Оплата карткою на сайті
+      </label>
+      <label>
+        <input type="radio" name="payment-method" value="privat-pay">
+        Privat Pay 24 Pay
+      </label>
+      <label>
+        <input type="radio" name="payment-method" value="krovato-credit">
+        Кредит від Krovato
+      </label>
+      <label>
+        <input type="radio" name="payment-method" value="privatbank-part-payment">
+        Оплата частинами ПриватБанк
+      </label>
+      <label>
+        <input type="radio" name="payment-method" value="monobank-part-payment">
+        Оплата частинами МоноБанк
+      </label>
+    </fieldset>
+    <button type="submit">Підтвердити</button>
+ </form> -->

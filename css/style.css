@@ -4,7 +4,6 @@
 /*+ Base */
 body {
     font-family: 'Proxima Nova';
-    font-size: 16px;
     color: #535353;
     background-color: #f8f8f8;
     padding: 30px 0 70px;
@@ -126,13 +125,14 @@ body {
     height: 20px;
     border-radius: 2px;
     border: 1px solid #d1d5d5;
+    background-image: url(../img/checkbox-info__checked.svg);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .checkbox-info__input:checked + .checkbox-info__label::before {
-    background-image: url(../img/checkbox-info__checked.svg);
     background-color: #ffbc57;
-    background-repeat: no-repeat;
-    background-position: center;
+    border: #d1d5d5;
 }
 
 /* // Checkout delivery */
@@ -164,7 +164,8 @@ body {
 }
 
 .choose__input,
-.checkbox-info__input {
+.checkbox-info__input,
+.checkout-payment__input {
     appearance: none; /* Видаляє стандартне відображення елементів */
     opacity: 0; /* Робить елементи невидимими */
     pointer-events: none; /* Вимикає взаємодію з елементами */
@@ -277,4 +278,53 @@ body {
 
 .description-box__map-btn:hover {
     transform: scale(1.05);
+}
+
+/* // Checkout payment  */
+.checkout-payment__title {
+    color: #2b2929;
+    font-size: 17px;
+    line-height: 1.41;
+}
+
+.checkout-subtitle--payment::before {
+    content: '';
+    width: 60px;
+    height: 60px;
+    background-image: url(../img/payment/icon-payment.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.checkout-payment__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+}
+
+.checkout-payment__item {
+    
+}
+
+.checkout-payment__label {
+    display: flex;
+    flex-grow: 0; 
+    align-items: center;
+    column-gap: 10px;
+}
+
+.checkout-payment__label::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #d1d5d5;
+    background-image: url(../img/checkbox-info__checked.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.checkout-payment__input:checked + .checkout-payment__label::before {
+    background-color: #ffbc57;
+    border-color: #ffbc57;
 }
