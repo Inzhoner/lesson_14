@@ -235,7 +235,7 @@ body {
 }
 
 /* // Delivery description */
-.checkout-delivery__description {
+.delivery-option__description {
     display: flex;
     gap: 20px;
     align-items: center;
@@ -273,6 +273,7 @@ body {
     font-weight: 600;
     line-height: 1.26;
     padding: 13px 20px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease-in-out;
 }
 
 .btn-map__link::before {
@@ -285,7 +286,8 @@ body {
 }
 
 .btn-map__link:hover {
-    transform: scale(1.05);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
 /* // Checkout payment  */
@@ -313,6 +315,7 @@ body {
 .checkout-payment__item {
     display: flex;
     flex-grow: 0;
+    position: relative;
 }
 
 .checkout-payment__label {
@@ -336,4 +339,66 @@ body {
 .checkout-payment__input:checked + .checkout-payment__label::before {
     background-color: #ffbc57;
     border-color: #ffbc57;
+}
+
+/* // Checkout comment  */
+
+.checkout-comment {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.checkout-comment__customer {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkout-subtitle--comment::before {
+    content: '';
+    width: 60px;
+    height: 60px;
+    background-image: url(../img/payment/icon-comment.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.checkout-comment__textarea {
+    max-width: 100%;
+    min-height: 150px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px solid #d1d5d5;
+    background: #fff;
+    resize: vertical;
+    color: #535353;
+    line-height: 1.87;
+}
+
+.checkout-comment__textarea::placeholder {
+    color: #535353;
+    line-height: 1.87;
+}
+
+.checkout-comment__btn {
+    display: flex;
+    justify-content: center;
+}
+
+.checkout-comment__link {
+    color: #fff;
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.26;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px 100px;
+    border-radius: 8px;
+    background: #ffbc57;
+    transition: transform 0.15s ease, box-shadow 0.15s ease-in-out;
+}
+
+.checkout-comment__link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
