@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="uk">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Form (lesson-14)</title>
 </head>
-
 <body>
     <div class="order">
         <div class="order__container">
@@ -22,27 +20,67 @@
                             <div class="checkout-info__body">
                                 <div class="checkout-info__column">
                                     <div class="checkout-info__item">
-                                        <input class="checkout-info__input" id="surname" type="text" placeholder="Прізвище">
+                                        <input class="checkout-info__input"
+                                               id="surname"
+                                               type="text"
+                                               name="surname"
+                                               placeholder="Прізвище"
+                                               tabindex="1"
+                                               autofocus
+                                               required>
                                     </div>
                                     <div class="checkout-info__item">
-                                        <input class="checkout-info__input" id="name" type="text" placeholder="Ім’я">
+                                        <input class="checkout-info__input"
+                                               id="name"
+                                               type="text"
+                                               name="name"                                             
+                                               tabindex="2"
+                                               required
+                                               placeholder="Ім’я">
                                     </div>
                                     <div class="checkout-info__item">
-                                        <input class="checkout-info__input" id="father" type="text" placeholder="По батькові">
+                                        <input class="checkout-info__input"
+                                               id="father"
+                                               type="text"
+                                               name="father"
+                                               tabindex="3"
+                                               required
+                                               placeholder="По батькові">
                                     </div>
                                 </div>
                                 <div class="checkout-info__column">
                                     <div class="checkout-info__item">
-                                        <input class="checkout-info__input" id="phone" type="tel" placeholder="Контактний телефон">
+                                        <input class="checkout-info__input"
+                                               id="phone"
+                                               type="tel"
+                                               name="phone"
+                                               tabindex="4"
+                                               required
+                                               placeholder="Контактний телефон">
                                     </div>
                                     <div class="checkout-info__item">
-                                        <input class="checkout-info__input" id="email" type="email" placeholder="E-mail">
+                                        <input class="checkout-info__input"
+                                               id="email"
+                                               type="text"
+                                               name="email"
+                                               tabindex="5"
+                                               required
+                                               autocomplete="on"
+                                               placeholder="E-mail">
                                     </div>
                                 </div>
                             </div>
                             <div class="checkout-info__checkbox checkbox-info">
-                                <input class="checkbox-info__input" id="recipient" type="checkbox" name="recipient">
-                                <label class="checkbox-info__label" for="recipient">Отримуватиме замовлення інша людина</label>
+                                <input class="checkbox-info__input"
+                                       id="recipient"
+                                       type="checkbox"
+                                       name="recipient"
+                                       tabindex="6"
+                                       value="form[]">                                       
+                                <label class="checkbox-info__label"
+                                       for="recipient">
+                                       Отримуватиме замовлення інша людина
+                                </label>                                
                             </div>
                         </div>
                     </div>
@@ -57,21 +95,21 @@
                                 <ul class="delivery-option__list">
                                     <li class="delivery-option__item choose">
                                         <input class="choose__input" id="pickup" type="radio" name="delivery" value="pickup" checked>
-                                        <label class="choose__label choose__label--pickup" for="pickup">
+                                        <label class="choose__label choose__label--pickup" for="pickup" tabindex="7">
                                             <span class="choose__title">Самовивіз із магазину</span>
                                             <span class="choose__price">Бесплатно</span>
                                         </label>
                                     </li>
                                     <li class="delivery-option__item choose">
                                         <input class="choose__input" id="nova-poshta" type="radio" name="delivery" value="nova-poshta">
-                                        <label class="choose__label choose__label--nova-poshta" for="nova-poshta">
+                                        <label class="choose__label choose__label--nova-poshta" for="nova-poshta" tabindex="8">
                                             <span class="choose__title">Доставка Нова Пошта</span>
                                             <span class="choose__price">≈ від 500 грн</span>
                                         </label>
                                     </li>
                                     <li class="delivery-option__item choose">
                                         <input class="choose__input" id="courier" type="radio" name="delivery" value="courier">
-                                        <label class="choose__label choose__label--courier" for="courier">
+                                        <label class="choose__label choose__label--courier" for="courier" tabindex="9">
                                             <span class="choose__title">Доставка кур'єром</span>
                                             <span class="choose__price">≈ від 200 грн</span>
                                         </label>
@@ -85,7 +123,7 @@
                                             <p class="description-box__time">Графік роботи: щодня з 9:00 до 18:00</p>
                                             <p class="description-box__address">м. Київ, пров. Ізяславський 52, пов. 2</p>
                                         </div>
-                                        <button class="description-box__map-btn btn-map">
+                                        <button class="description-box__map-btn btn-map" tabindex="10">
                                             <span class="btn-map__link">На мапі</span>
                                         </button>
                                     </div>
@@ -103,7 +141,7 @@
                                 <!--/ Cash item -->
                                 <li class="checkout-payment__item">
                                     <input class="checkout-payment__input" id="cash" type="radio" name="payment-method" value="cash">
-                                    <label class="checkout-payment__label" for="cash">
+                                    <label class="checkout-payment__label" for="cash" tabindex="11">
                                         <span class="checkout-payment__title">
                                             Готівкою при отриманні (Післяоплата)
                                         </span>
@@ -112,7 +150,7 @@
                                 <!--/ Card item -->
                                 <li class="checkout-payment__item">
                                     <input class="checkout-payment__input" id="card" type="radio" name="payment-method" value="card" checked>
-                                    <label class="checkout-payment__label" for="card">
+                                    <label class="checkout-payment__label" for="card" tabindex="12">
                                         <span class="checkout-payment__title">
                                             Оплата карткою на сайті
                                         </span>
@@ -123,7 +161,7 @@
                                 <!--/ Privat item -->
                                 <li class="checkout-payment__item">
                                     <input class="checkout-payment__input" id="privat-pay" type="radio" name="payment-method" value="privat-pay">
-                                    <label class="checkout-payment__label" for="privat-pay">
+                                    <label class="checkout-payment__label" for="privat-pay" tabindex="13">
                                         <span class="checkout-payment__title">
                                             Privat Pay
                                         </span>
@@ -133,7 +171,7 @@
                                 <!--/ Credit item  -->
                                 <li class="checkout-payment__item">
                                     <input class="checkout-payment__input" id="credit" type="radio" name="payment-method" value="credit">
-                                    <label class="checkout-payment__label" for="credit">
+                                    <label class="checkout-payment__label" for="credit" tabindex="14">
                                         <span class="checkout-payment__title">
                                             Кредит від Krovato
                                         </span>
@@ -142,21 +180,35 @@
                                 <!--/ Privat parts item -->
                                 <li class="checkout-payment__item">
                                     <input class="checkout-payment__input" id="privat-parts" type="radio" name="payment-method" value="privat-parts">
-                                    <label class="checkout-payment__label" for="privat-parts">
+                                    <label class="checkout-payment__label" for="privat-parts" tabindex="15">
                                         <span class="checkout-payment__title">
                                             Оплата частинами ПриватБанк
                                         </span>
-                                        <img class="checkout-payment__img-master-card" src="img/payment/privaty-credit-logo.svg" alt="icon privat credit pay">
+                                        <img
+                                          class="checkout-payment__img-master-card"
+                                          src="img/payment/privaty-credit-logo.svg"
+                                          alt="icon privat credit pay"
+                                        >
                                     </label>
                                 </li>
                                 <!--/ Mono parts item -->
                                 <li class="checkout-payment__item">
-                                    <input class="checkout-payment__input" id="monobank-parts" type="radio" name="payment-method" value="monobank-parts">
-                                    <label class="checkout-payment__label" for="monobank-parts">
-                                        <span class="checkout-payment__title">
+                                    <input class="checkout-payment__input"
+                                           id="monobank-parts"
+                                           type="radio"
+                                           name="payment-method"
+                                           value="monobank-parts">
+                                    <label class="checkout-payment__label"
+                                           for="monobank-parts"
+                                           tabindex="16">
+                                           <span class="checkout-payment__title">
                                             Оплата частинами МоноБанк
                                         </span>
-                                        <img class="checkout-payment__img-master-card" src="img/payment/mono-bank-logo.svg" alt="icon privat credit pay">
+                                        <img
+                                          class="checkout-payment__img-master-card"
+                                          src="img/payment/mono-bank-logo.svg"
+                                          alt="icon privat credit pay"
+                                        >
                                     </label>
                                 </li>
                             </ul>
@@ -168,9 +220,9 @@
                             <h2 class="checkout-subtitle checkout-subtitle--comment">
                                 Вибір способу оплати
                             </h2>
-                            <textarea class="checkout-comment__textarea" placeholder="Ваш коментар" name="form[textarea]"></textarea>
+                            <textarea class="checkout-comment__textarea" placeholder="Ваш коментар" name="comment" tabindex="17"></textarea>
                         </div>
-                        <div class="checkout-comment__btn">
+                        <div class="checkout-comment__btn" tabindex="18">
                             <button class="checkout-comment__link">ОФОРМИТИ ЗАМОВЛЕННЯ</button>
                         </div>
                     </div>
@@ -181,4 +233,5 @@
             <h3 class="form-title">Form</h3>
         </div>
     </div>
+           
 </body>

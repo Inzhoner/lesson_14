@@ -97,20 +97,31 @@ body {
     flex-direction: column;
     row-gap: 20px;
 }
+
 .checkout-info__item {
     border-radius: 8px;
     border: 1px solid #d1d5d5;
     background: #fff;
 }
+
 .checkout-info__input {
     width: 325px;
     height: 50px;
     padding-inline: 20px;
 }
 
-.checkout-info__input::placeholder {
-    line-height: 1.87;
+.checkout-info__input:focus {
+    outline: 1px solid #ffbc57;
+    border-radius: 8px;
 }
+
+/** стилізація  placeholder  */
+/* .checkout-info__input::placeholder {
+    transition: opacity 0.8s;
+}
+.checkout-info__input:focus:placeholder {
+    opacity: 0;
+} */
 
 .checkbox-info {
     display: flex;
@@ -139,6 +150,10 @@ body {
 .checkbox-info__input:checked + .checkbox-info__label::before {
     background-color: #ffbc57;
     border: #d1d5d5;
+}
+
+.checkbox-info__label:focus-visible {
+    color: #ffbc57;
 }
 
 /* // Checkout delivery */
@@ -187,13 +202,14 @@ body {
     flex-direction: column;
     align-items: center;
     border-radius: 8px;
-    border: 3px solid #f8f8f8;
+    outline: 3px solid #f8f8f8;
     background: #fff;
     padding: 20px 10px;
 }
 
-.choose__label:hover {
-    border-color: #ffbc57;
+.choose__label:hover,
+.choose__label:focus-visible {
+    outline-color: #ffbc57;
     background: #f8f8f8;
 }
 
@@ -266,9 +282,19 @@ body {
     line-height: 1.4;
 }
 
+.description-box__map-btn:focus-visible {
+    outline: none;
+}
+
+.description-box__map-btn:focus-visible .btn-map__link {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
 .btn-map__link {
     display: flex;
     gap: 10px;
+    align-items: center;
     border-radius: 8px;
     background: #ffbc57;
     color: #fff;
@@ -376,6 +402,7 @@ body {
     resize: vertical;
     color: #535353;
     line-height: 1.87;
+    outline-color: #ffbc57;
 }
 
 .checkout-comment__textarea::placeholder {
