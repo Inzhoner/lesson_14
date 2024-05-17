@@ -147,13 +147,15 @@ body {
     background-position: center;
 }
 
-.checkbox-info__input:checked + .checkbox-info__label::before {
+.checkbox-info__input:checked + .checkbox-info__label::before,
+.checkbox-info__input:focus-visible + .checkbox-info__label::before {
     background-color: #ffbc57;
     border: #d1d5d5;
 }
 
-.checkbox-info__label:focus-visible {
-    color: #ffbc57;
+.checkbox-info__input:focus-visible + .checkbox-info__label::before {
+    background-color: #ffbc57;
+    border: #d1d5d5;
 }
 
 /* // Checkout delivery */
@@ -370,6 +372,12 @@ body {
     border-color: #ffbc57;
 }
 
+.checkout-payment__input:focus-visible + .checkout-payment__label::before {
+    outline: none;
+    background-color: #ffbc57;
+    border-color: #ffbc57;
+}
+
 /* // Checkout comment  */
 
 .checkout-comment {
@@ -429,6 +437,15 @@ body {
 }
 
 .checkout-comment__link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.checkout-comment__btn:focus-visible {
+    outline: none;
+}
+
+.checkout-comment__btn:focus-visible .checkout-comment__link {
     transform: translateY(-2px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
