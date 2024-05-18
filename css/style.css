@@ -372,10 +372,11 @@ body {
 }
 
 .checkout-payment__input:focus + .checkout-payment__label::before {
-    /* outline: 1px solid red; */
+    outline: green;
     background-color: #ffbc57;
     border-color: #ffbc57;
 }
+
 
 /* // Checkout comment  */
 
