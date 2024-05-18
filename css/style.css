@@ -226,7 +226,7 @@ body {
 
 .choose__label:focus-within::before {
     background-image: url(../img/delivery/check-circle.svg);
-  }
+}
 
 /*/ pickup icon */
 .choose__label--pickup::before {
@@ -372,7 +372,7 @@ body {
 }
 
 .checkout-payment__input:focus + .checkout-payment__label::before {
-    outline: none;
+    /* outline: 1px solid red; */
     background-color: #ffbc57;
     border-color: #ffbc57;
 }
