@@ -372,11 +372,15 @@ body {
 }
 
 .checkout-payment__input:focus + .checkout-payment__label::before {
-    outline: 1px solid #ffbc57;
+    outline: 1px solid green;
     background-color: #ffbc57;
     border-color: #ffbc57;
 }
 
+
+.checkout-payment__input:checked ~ .checkout-payment__title::before {
+    background-image: url(../img/checkbox-info__checked.svg);
+}
 
 /* // Checkout comment  */
 
