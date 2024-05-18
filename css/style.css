@@ -148,12 +148,7 @@ body {
 }
 
 .checkbox-info__input:checked + .checkbox-info__label::before,
-.checkbox-info__input:focus-visible + .checkbox-info__label::before {
-    background-color: #ffbc57;
-    border: #d1d5d5;
-}
-
-.checkbox-info__input:focus-visible + .checkbox-info__label::before {
+.checkbox-info__input:focus + .checkbox-info__label::before {
     background-color: #ffbc57;
     border: #d1d5d5;
 }
@@ -210,7 +205,7 @@ body {
 }
 
 .choose__label:hover,
-.choose__label:focus-visible {
+.choose__label:focus {
     outline-color: #ffbc57;
     background: #f8f8f8;
 }
@@ -226,6 +221,10 @@ body {
 
 /*! check-circle */
 .choose__input:checked + .choose__label::before {
+    background-image: url(../img/delivery/check-circle.svg);
+}
+
+.choose__input:focus + .choose__label::before {
     background-image: url(../img/delivery/check-circle.svg);
 }
 
@@ -372,7 +371,7 @@ body {
     border-color: #ffbc57;
 }
 
-.checkout-payment__input:focus-visible + .checkout-payment__label::before {
+.checkout-payment__input:focus + .checkout-payment__label::before {
     outline: none;
     background-color: #ffbc57;
     border-color: #ffbc57;
