@@ -372,7 +372,7 @@ body {
 }
 
 .checkout-payment__input:focus + .checkout-payment__label::before {
-    outline: green;
+    outline: 1px solid green;
     background-color: #ffbc57;
     border-color: #ffbc57;
 }
