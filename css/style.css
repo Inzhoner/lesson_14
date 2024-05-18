@@ -224,9 +224,9 @@ body {
     background-image: url(../img/delivery/check-circle.svg);
 }
 
-.choose__input:focus + .choose__label::before {
+.choose__label:focus-within::before {
     background-image: url(../img/delivery/check-circle.svg);
-}
+  }
 
 /*/ pickup icon */
 .choose__label--pickup::before {
